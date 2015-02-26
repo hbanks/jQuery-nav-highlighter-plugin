@@ -34,11 +34,35 @@ $(function() {
 		console.log(navArray);
 		aArray.push(navArray);
 		console.log(aArray);
+		var selector = aArray.join(" , ");
+		console.log(selector);
 	}
+
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		var tops = [];
+		
+		$(selector).each(function(){
+			var top = $(this).position().top;
+			if(scrollTop > top) {
+				var id = $(this).attr('id');
+				$('.nav-active').removeClass('nav-active');
+				$('a[href="#'+id+'"]').parent().addClass('nav-active');
+			}
+			tops.push(top);
+		});
+
+	});
 	
 
-	$(window).scroll(function (){
+	// $(window).scroll(function (){
+	// 	var id = aArray[i];
+	// 	var testScroll = $(aArray).scrollTop();
+	// 	console.log(testScroll);
+	// 	var idPosition = $(id).offset().top;
+	// 	var idHeight = idPosition - $(window).scrollTop();
+	// 	console.log(idHeight);
 		
-	});
+	// });
 
 });
