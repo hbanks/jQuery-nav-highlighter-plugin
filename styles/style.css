@@ -1,5 +1,5 @@
 .top {
-	padding-top: 170px;
+	padding-top: 65px;
 	background: white;
 	display: block;
 }
@@ -11,6 +11,7 @@ ul.nav {
 	right: 0;
 	background: white;
 	width: 100%;
+	margin: 0;
 	/*padding-top: 50px;*/
 }
 
@@ -23,6 +24,10 @@ ul.nav li a {
 	display: inline-block;
 	padding: 10px 20px;
 	text-decoration: none;
+}
+
+li a:focus {
+	outline: 0;
 }
 
 li:after {
@@ -45,10 +50,4 @@ li:hover:after {
 	height: 3px;
 	background: #40E0D0;
 	width: 100%;
-}
-
-
-
-section.main {
-	/*padding-top: 70px;*/
 }
