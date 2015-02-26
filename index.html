@@ -12,6 +12,17 @@
 </header>
 
 <section class="top">
+	<!-- <nav class="top">
+		<ul class="navHighlighter">
+			<li><a href="#scrollnav1">lorem</a></li>
+			<li><a href="#scrollnav2">lorem</a></li>
+			<li><a href="#scrollnav3">lorem</a></li>
+			<li><a href="#scrollnav4">lorem</a></li>
+		</ul>
+	</nav> -->
+</section>
+
+<section class="main">
 	<nav class="top">
 		<ul class="navHighlighter">
 			<li><a href="#scrollnav1">lorem</a></li>
@@ -20,9 +31,7 @@
 			<li><a href="#scrollnav4">lorem</a></li>
 		</ul>
 	</nav>
-</section>
-
-<section class="main">
+	
 	<div id="scrollnav1">
 		<h2>Title 1</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ad aliquam laboriosam aliquid consequatur impedit, molestias repudiandae. Odit consectetur amet nisi alias ab quaerat ut voluptas, ullam sapiente, vero dicta aperiam, aliquam mollitia nobis in nemo dolores eveniet dolor cum a, iste illum officiis. Aperiam maxime quas sint inventore optio quasi iure neque tempore est, perferendis adipisci, asperiores, nesciunt qui quia, iste esse commodi. Provident, eaque, dolores nobis, minus cum pariatur commodi dignissimos quibusdam culpa harum totam deserunt fuga voluptas libero repudiandae perferendis eligendi repellendus ad amet vitae delectus itaque! Consequuntur repellat libero, voluptas suscipit asperiores laborum, natus ratione inventore.</p>
@@ -74,17 +83,25 @@
 <style>
 
 	ul.navHighlighter li:hover:after {
-		background: cornflowerblue;
+		background: RGB(205, 153, 117);
 	}
 
 	.nav-active:after {
-		background: cornflowerblue;
+		background: RGB(205, 153, 117);
 	}
 
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/script.js"></script>
-	
+<script src="navHighlighter.js"></script>
+
+<script>
+	$(function() {
+
+	 	$('body').navHighlighter();
+
+	});
+</script>	
+
 </body>
 </html>
