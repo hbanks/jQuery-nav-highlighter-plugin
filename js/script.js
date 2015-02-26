@@ -6,7 +6,7 @@ $(function() {
 	    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	    if (target.length) {
 	      $('html,body').animate({
-	        scrollTop: target.offset().top
+	        scrollTop: target.offset().top - 80
 	      }, 1000);
 	      return false;
 	    }
@@ -23,7 +23,7 @@ $(function() {
 
 	// get an array of 'href' of each a tag
 
-	var navLink = $('ul.nav a');
+	var navLink = $('ul.navHighlighter a');
 	console.log(navLink);
 	var aArray = [];
 
@@ -43,7 +43,7 @@ $(function() {
 		var tops = [];
 		
 		$(selector).each(function(){
-			var top = $(this).position().top;
+			var top = $(this).position().top -90;
 			if(scrollTop > top) {
 				var id = $(this).attr('id');
 				$('.nav-active').removeClass('nav-active');
@@ -53,16 +53,4 @@ $(function() {
 		});
 
 	});
-	
-
-	// $(window).scroll(function (){
-	// 	var id = aArray[i];
-	// 	var testScroll = $(aArray).scrollTop();
-	// 	console.log(testScroll);
-	// 	var idPosition = $(id).offset().top;
-	// 	var idHeight = idPosition - $(window).scrollTop();
-	// 	console.log(idHeight);
-		
-	// });
-
 });
