@@ -2,9 +2,11 @@
 
 ## Usage
 
-navHighlighter will create a subtle underline on all of the active navigation links, letting your users know where they are on your page. When you hover the links, or scroll between the sections of your website, the underline will animate in.
+navHighlighter will create a subtle underline on all of the active navigation links letting your users know where they are on your page. When you hover the links, or scroll between the sections of your website, the underline will animate in.
 
 ## Getting Started
+
+Download jquery.navHighlighter.js from GitHub and copy the files into the JavaScript folder in your directory.
 
 Add the plugin's style sheet to the head of your HTML document. Make sure you link if before your own as it has default styling included and you don't want it to overwrite your CSS.
 
@@ -45,7 +47,7 @@ navHighlighter works by adding and removing the class of ".nav-active" to the di
 
 navHighlighter wouldn't be great if you couldn't customize it to suit the look of your site. You can adjust the colour, the height and the blur of the underline. You can adjust the colour using any method (hex code, rgb value, name, etc.).
 
-When you call the function, make sure you set it to select the body element. Then update your options as you see fit!
+First, call the function within the &lt;script&gt;&lt;/script&gt; tags in your HTML or main Javascript file. When you call the function, make sure you set it to select the body element. Then update your options as you see fit!
 
 ```
 <script>

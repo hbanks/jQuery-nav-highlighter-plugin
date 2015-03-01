@@ -26,12 +26,13 @@
 	<div class="innerWrapper">
 		<div id="usage">
 			<h2>Usage</h2>
-			<p>navHighlighter will create a subtle underline on all of the active navigation links, letting your users know where they are on your page. When you hover the links, or scroll between the sections of your website, the underline will animate in. </p>
+			<p>navHighlighter will create a subtle underline on all of the active navigation links letting your users know where they are on your page. When you hover the links, or scroll between the sections of your website, the underline will animate in. </p>
 		</div>
 
 		<div id="gettingStarted">
 			<h2>Getting Started</h2>
-			<p>Add the plugin's style sheet to the head of your HTML document. Make sure you link if before your own as it has default styling included and you don't want it to overwrite your CSS.</p>
+			<p>Download jquery.navHighlighter.js from GitHub and copy the files into the JavaScript folder in your directory.</p>
+			<p>Add navHighlighter's style sheet to the head of your HTML document. Make sure you link it before your own as it has default styling included and you don't want it to overwrite your CSS.</p>
 			<div class="code">
 				<pre>
 					<code>
@@ -46,13 +47,13 @@
 				</pre>
 			</div>
 
-			<p>Include a link to jQuery and a link to plugin at the bottom of your HTML document before the last body tag.</p>
+			<p>Include a link to jQuery and a link to plugin at the bottom of your HTML document before the closing body tag. Make sure you properly link from your directory.</p>
 			
 			<div class="code">
 				<pre>
 					<code>
 &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;jquery.navHighlighter.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.navHighlighter.js&quot;&gt;&lt;/script&gt;
 					</code>
 				</pre>
 			</div>
@@ -80,7 +81,7 @@
 		<div id="customize">
 			<h2>Customize</h2>
 			<p>navHighlighter wouldn't be great if you couldn't customize it to suit the look of your site. You can adjust the colour, the height and the blur of the underline. You can adjust the colour using any method (hex code, rgb value, name, etc.)</p>
-			<p>When you call the function, make sure you set it to select the body element. Then update your options as you see fit!</p>
+			<p>First, call the function within the &lt;script&gt;&lt;/script&gt; tags in your HTML or main Javascript file. When you call the function, make sure you set it to select the body element. Then update your options as you see fit!</p>
 			<div class="code">
 				<pre>
 					<code>
