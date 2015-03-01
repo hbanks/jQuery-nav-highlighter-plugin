@@ -1,5 +1,18 @@
 $(function() {
 
+	// when we scroll down the window, do this:
+	$(window).scroll(function(){
+		// find out how much we calculate how far we've scrolled from the top
+		var testscroll = $(window).scrollTop();
+		console.log(testscroll);
+		// if we have scrolled past 200, add the alternate class to nav bar
+		if(testscroll > 770) {
+			$('.navHighlighter').addClass('scrolling');
+		} else {
+			$('.navHighlighter').removeClass('scrolling');
+		}
+	});
+	
 	$('a[href*=#]:not([href=#])').click(function() {
 	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 	    var target = $(this.hash);

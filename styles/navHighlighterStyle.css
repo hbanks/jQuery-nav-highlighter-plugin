@@ -1,3 +1,4 @@
+/*navigation presets - make sure you add the class of .navHighlighter*/
 .top {
 	padding-top: 65px;
 	background: white;
@@ -12,7 +13,6 @@ ul.navHighlighter {
 	background: white;
 	width: 100%;
 	margin: 0;
-	/*padding-top: 50px;*/
 }
 
 ul.navHighlighter li {
@@ -24,8 +24,10 @@ ul.navHighlighter li a {
 	display: inline-block;
 	padding: 10px 20px;
 	text-decoration: none;
+	color: black;
 }
 
+/*after, focus and hover states*/
 li a:focus {
 	outline: 0;
 }

@@ -1,4 +1,23 @@
-$.fn.navHighlighter = function() {
+$.fn.navHighlighter = function(options) {
+
+	var settings = $.extend({
+	    underlineColour: 'RGB(205, 153, 117)',
+	    blur: "1px",
+	    height: "3px"
+	  }, options);
+	
+	// when we scroll down the window, do this:
+	$(window).scroll(function(){
+		// find out how much we calculate how far we've scrolled from the top
+		var testscroll = $(window).scrollTop();
+		console.log(testscroll);
+		// if we have scrolled past 700, add the alternate class to nav bar
+		if(testscroll > 700) {
+			$('.navHighlighter').addClass('scrolling');
+		} else {
+			$('.navHighlighter').removeClass('scrolling');
+		}
+	});
 
 	$('a[href*=#]:not([href=#])').click(function() {
 	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -11,7 +30,7 @@ $.fn.navHighlighter = function() {
 	      return false;
 	    }
 	  }
-	}); // code courtesy of CSS-Tricks
+	}); // smooth scroll courtesy of CSS-Tricks
 
 	// apply the class of nav-active to the current nav link
 	$('a').on('click', function(e) {
@@ -53,4 +72,6 @@ $.fn.navHighlighter = function() {
 		});
 
 	});
+
+	$('<style>.nav-active:after { background: ' +options.underlineColour+'; -webkit-filter: blur('+options.blur+'); height: '+options.height+'; } li:after { background: transparent; -webkit-filter: blur('+options.blur+'); height: '+options.height+'; } '+' li:hover:after { background: '+options.underlineColour+' !important; -website-filter: blur('+options.blur+'); height: '+options.height+'}; </style>').appendTo('body');		
 }
